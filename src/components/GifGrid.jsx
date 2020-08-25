@@ -28,21 +28,24 @@ export const GifGrid = ({ category }) => {
     };
 
     return (
-        <div>
+        <>
             <h3>{category}</h3>
+            <div className="card-grid">
 
-            {
-                images.map((img) => (
-                    <GifGridItem
-                        key={img.id}
-                        {...img}
-                    />
-                ))
-            }
+                {
+                    images.map((img) => (
+                        <GifGridItem
+                            key={img.id}
+                            {...img}
+                        />
+                    ))
+                }
 
-            {/* <h3>{count}</h3>
-            <button onClick={() => setCount(count + 1)} ></button> */}
-        </div>
+                {/* <h3>{count}</h3>
+                <button onClick={() => setCount(count + 1)} ></button> */}
+            </div>
+        </>
+
     )
 }
 
