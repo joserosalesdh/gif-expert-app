@@ -15,7 +15,7 @@ const AddCategory = ({ setCategories }) => {
         e.preventDefault();
 
         if (inputValue.trim().length > 2) {
-            setCategories(cats => [...cats, inputValue]); //cats es el estado anterios de categorias
+            setCategories(cats => [inputValue, ...cats]); //cats es el estado anterios de categorias //puse el ...cats al ultimo para que despues de buscar una categoria (por el inputValue) me la mande adelante y no abajo
             setInputValue('');
         }
         // console.log('Submit hecho')
