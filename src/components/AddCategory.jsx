@@ -16,7 +16,7 @@ const AddCategory = ({ setCategories }) => {
 
         if (inputValue.trim().length > 2) {
             setCategories(cats => [inputValue, ...cats]); //cats es el estado anterios de categorias //puse el ...cats al ultimo para que despues de buscar una categoria (por el inputValue) me la mande adelante y no abajo
-            setInputValue('');
+            setInputValue(''); // Establece el valor de la caja de texto a un string vacio 
         }
         // console.log('Submit hecho')
 
@@ -24,6 +24,7 @@ const AddCategory = ({ setCategories }) => {
     //El inputValue va a ser la ultima informacion de lo que usuario escribio
     return (
         <form onSubmit={handleSubmit}>
+            <p>{inputValue}</p>
             <input
                 type="text"
                 value={inputValue}
